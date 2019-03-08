@@ -2,6 +2,12 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { SchoolSVG, GearSVG, VideoSVG, AwardSVG } from './svgs.js'
 import Typist from 'react-typist';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+
+import Achievements from './achievements'
+import Education from './education'
+import Skills from './skills'
+import Video from './video'
 
 var createReactClass = require('create-react-class');
 
@@ -74,19 +80,34 @@ var Header = createReactClass({
             <button className='skip-button' style={buttonStyle} onClick={this.exitTyping}>SKIP</button>
           </div>
         </Fade>
-
-        <Fade when={this.state.show_icons} duration={1000} top={true}>
-          <SchoolSVG />
-        </Fade>
-        <Fade when={this.state.show_icons} duration={1000} left={true}>
-          <GearSVG />
-        </Fade>
-        <Fade when={this.state.show_icons} duration={1000} right={true}>
-          <AwardSVG />
-        </Fade>
-        <Fade when={this.state.show_icons} duration={1000} bottom={true}>
-          <VideoSVG />
-        </Fade>
+        <Router>
+          <div>
+            <Link to="/education">
+              <Fade when={this.state.show_icons} duration={1000} top={true}>
+                <SchoolSVG />
+              </Fade>
+            </Link>
+            <Link to="/skills">
+              <Fade when={this.state.show_icons} duration={1000} left={true}>
+                <GearSVG />
+              </Fade>
+            </Link>
+            <Link to="/achievements">
+              <Fade when={this.state.show_icons} duration={1000} right={true}>
+                <AwardSVG />
+              </Fade>
+            </Link>
+            <Link to="/video">
+              <Fade when={this.state.show_icons} duration={1000} bottom={true}>
+                <VideoSVG />
+              </Fade>
+            </Link>
+            <Route path="/education" component={Education} />
+            <Route path="/skills" component={Skills} />
+            <Route path="/achievements" component={Achievements} />
+            <Route path="/video" component={Video} />
+          </div>
+        </Router>
 
         <Fade when={this.state.show_fade_text} bottom={true} duration={2000} distance={'0.2em'}>
           <span className={'fade-text'}> {this.state.fade_text_array[this.state.fade_text_index]} </span>
