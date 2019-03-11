@@ -2,7 +2,7 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import { SchoolSVG, GearSVG, VideoSVG, AwardSVG } from './svgs.js'
 import Typist from 'react-typist';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import Achievements from './achievements'
 import Education from './education'
@@ -14,7 +14,8 @@ var createReactClass = require('create-react-class');
 var Header = createReactClass({
 
   getInitialState() {
-    return({show_typing: true, 
+    return({header: true,
+            show_typing: true, 
             fade_text_array: ["OOOUU ICONS :)", 
                               "SCHOOL BAG: EDUCATION, GEAR: SKILLS, MEDA...you get it",
                               "CLICK ON AN ICON TO FIND OUT MORE ABOUT ME!",
@@ -52,7 +53,18 @@ var Header = createReactClass({
     setTimeout(this.fadeTyping, 1000)
   },
 
+  exitHeader(){
+    this.setState({header: false})
+  },
+
+  goEducation(){
+    this.exitHeader()
+  },
+
   render() {
+    var headerDisplay = this.state.header ? 'flex' : 'none'
+    var headerStyle = { display: headerDisplay }
+
     var showButton = this.state.show_typing ? 'block' : 'none'
     var buttonStyle = { display: showButton }
 
@@ -72,7 +84,7 @@ var Header = createReactClass({
     }
 
     return (
-      <header className="App-header">
+      <header className="App-header" style={headerStyle}>
         <Fade when={this.state.fade_typing} duration={200}>
           <div className='typeText'> {typeText} </div>
 
@@ -80,34 +92,24 @@ var Header = createReactClass({
             <button className='skip-button' style={buttonStyle} onClick={this.exitTyping}>SKIP</button>
           </div>
         </Fade>
-        <Router>
-          <div>
-            <Link to="/education">
-              <Fade when={this.state.show_icons} duration={1000} top={true}>
-                <SchoolSVG />
-              </Fade>
-            </Link>
-            <Link to="/skills">
-              <Fade when={this.state.show_icons} duration={1000} left={true}>
-                <GearSVG />
-              </Fade>
-            </Link>
-            <Link to="/achievements">
-              <Fade when={this.state.show_icons} duration={1000} right={true}>
-                <AwardSVG />
-              </Fade>
-            </Link>
-            <Link to="/video">
-              <Fade when={this.state.show_icons} duration={1000} bottom={true}>
-                <VideoSVG />
-              </Fade>
-            </Link>
-            <Route path="/education" component={Education} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/achievements" component={Achievements} />
-            <Route path="/video" component={Video} />
-          </div>
-        </Router>
+
+        <nav>
+          <Fade when={this.state.show_icons} duration={1000} top={true}>
+            <Link to="/education" onClick={this.goEducation}><SchoolSVG /></Link>
+          </Fade>
+          
+          <Fade when={this.state.show_icons} duration={1000} left={true}>
+            <Link to="/skills"><GearSVG /></Link>
+          </Fade>
+
+          <Fade when={this.state.show_icons} duration={1000} right={true}>
+            <Link to="/achievements"><AwardSVG /></Link>
+          </Fade>
+          
+          <Fade when={this.state.show_icons} duration={1000} bottom={true}>
+            <Link to="/video"><VideoSVG /></Link>
+          </Fade>
+        </nav>
 
         <Fade when={this.state.show_fade_text} bottom={true} duration={2000} distance={'0.2em'}>
           <span className={'fade-text'}> {this.state.fade_text_array[this.state.fade_text_index]} </span>
