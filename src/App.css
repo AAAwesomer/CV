@@ -1,4 +1,12 @@
 .App {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
   text-align: center;
 }
 
@@ -15,14 +23,13 @@
 
 .fade-text {
   font-size: calc(4px + 2vmin);
-  font-style: bold;
   bottom: 2em;
   position: absolute;
 }
 
 .skip-button {
   font-size: calc(4px + 2vmin);
-  display: inline-block;
+  display: block;
   padding: 0.3em 1em;
   text-decoration: none;
   color: white;
@@ -34,4 +41,15 @@
 
 .skip-button:hover {
   margin-top: 10px
+}
+
+.attr {
+  font-size: calc(4px + 2vmin);
+  text-align: left;
+  display: inline-block;
+  width: 50%;
+}
+
+p {
+  margin: 0.5em 0em
 }

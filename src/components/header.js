@@ -26,6 +26,13 @@ var Header = createReactClass({
             fade_typing: true})
   },
 
+  componentWillMount(){
+    /* console.log(window.location.pathname)
+    if (window.location.pathname != '/' ) {
+      this.setState({header: false})
+    } */
+  },
+
   showFade() {
     var next_idx = (this.state.fade_text_index + 1) % this.state.fade_text_array.length
     this.setState({fade_text_index: next_idx})
@@ -62,7 +69,8 @@ var Header = createReactClass({
   },
 
   render() {
-    var headerDisplay = this.state.header ? 'flex' : 'none'
+    var showHeader = ['/', 'home'].includes(window.location.pathname)
+    var headerDisplay = showHeader ? 'flex' : 'none'
     var headerStyle = { display: headerDisplay }
 
     var showButton = this.state.show_typing ? 'block' : 'none'
@@ -85,6 +93,7 @@ var Header = createReactClass({
 
     return (
       <header className="App-header" style={headerStyle}>
+        
         <Fade when={this.state.fade_typing} duration={200}>
           <div className='typeText'> {typeText} </div>
 
@@ -93,20 +102,20 @@ var Header = createReactClass({
           </div>
         </Fade>
 
-        <nav>
-          <Fade when={this.state.show_icons} duration={1000} top={true}>
-            <Link to="/education" onClick={this.goEducation}><SchoolSVG /></Link>
-          </Fade>
-          
-          <Fade when={this.state.show_icons} duration={1000} left={true}>
+        <nav>  
+          <Fade big top when={this.state.show_icons} duration={1000}>
             <Link to="/skills"><GearSVG /></Link>
           </Fade>
 
-          <Fade when={this.state.show_icons} duration={1000} right={true}>
+          <Fade big left when={this.state.show_icons} duration={1000}> 
             <Link to="/achievements"><AwardSVG /></Link>
           </Fade>
+
+          <Fade big right when={this.state.show_icons} duration={1000}>
+            <Link to="/education" onClick={this.goEducation}><SchoolSVG /></Link>
+          </Fade>
           
-          <Fade when={this.state.show_icons} duration={1000} bottom={true}>
+          <Fade big bottom when={this.state.show_icons} duration={1000}>
             <Link to="/video"><VideoSVG /></Link>
           </Fade>
         </nav>
