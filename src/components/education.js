@@ -17,25 +17,25 @@ var Education = createReactClass({
               and struggles.</p>
         <p><span style={{fontWeight: 'bold', marginTop: '20px'}}>Curiosity. </span> 
               At only the age of five, one of my favorite
-              pastimes was mathematics. I would go up to my dad and
+              pastimes was mathematics. I would walk up to my dad 
               with a piece of paper and request for him to fill it
               with algebraic equations for me to solve, only to run
-              back to him with a new A4 when I was done. My gusto
-              towards problem-solving hasn't changed over the years,
-              and during class I would often think ahead and bridge
-              previous knowledge to make my own proofs, sometimes
-              with luck, sometimes without.</p>
+              back to him with a new A4 when I was done. My passion
+              towards problem-solving hasn't since, and during class 
+              I would often think ahead and bridge previous knowledge 
+              to make my own proofs, sometimes with luck, sometimes 
+              without.</p>
         <p><span style={{fontWeight: 'bold'}}>Creativity. </span> 
               Students often take notes, for it helps them to memorize what
               is being taught in class. I, however, learned that the best way
               to memorize something in the long term is not to write it down,
               but to find a way to interpret it such that it clicks with your
               current understanding of the topic. Therefore, while others wrote,
-              I thought, embedding new concepts into my head, where they would 
-              stay. This is what effectively allowed for me to start companies, 
-              play sports, make music and produce code on the side, and come out
-              of school as top of the class in my favorite subjects, Math and 
-              Physics.</p>
+              I thought, embedding each seed of knowledge into my head where it would 
+              root as enhanced intuition. This is what effectively allowed for me 
+              to start companies, play sports, make music and produce code on the 
+              side, and come out of school as top of the class in my favorite 
+              subjects, Math and Physics.</p>
       </div>
     )
   }
