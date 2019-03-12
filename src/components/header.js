@@ -4,11 +4,6 @@ import { SchoolSVG, GearSVG, VideoSVG, AwardSVG } from './svgs.js'
 import Typist from 'react-typist';
 import { Link } from 'react-router-dom'
 
-import Achievements from './achievements'
-import Education from './education'
-import Skills from './skills'
-import Video from './video'
-
 var createReactClass = require('create-react-class');
 
 var Header = createReactClass({
