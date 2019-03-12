@@ -9,8 +9,7 @@ var createReactClass = require('create-react-class');
 var Header = createReactClass({
 
   getInitialState() {
-    return({header: true,
-            show_typing: true, 
+    return({show_typing: true, 
             fade_text_array: ["OOOUU ICONS :)", 
                               "GEAR: SKILLS, MEDAL: ACHIEVEMENTS, SCHOOL BAG...you get it",
                               "CLICK AN ICON TO FIND OUT MORE ABOUT ME!",
@@ -53,14 +52,6 @@ var Header = createReactClass({
 
   completeTyping(){
     setTimeout(this.fadeTyping, 1000)
-  },
-
-  exitHeader(){
-    this.setState({header: false})
-  },
-
-  goEducation(){
-    this.exitHeader()
   },
 
   render() {
@@ -107,7 +98,7 @@ var Header = createReactClass({
           </Fade>
 
           <Fade big right when={this.state.show_icons} duration={1000}>
-            <Link to="/education" onClick={this.goEducation}><SchoolSVG /></Link>
+            <Link to="/education"><SchoolSVG /></Link>
           </Fade>
           
           <Fade big bottom when={this.state.show_icons} duration={1000}>
