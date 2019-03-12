@@ -77,7 +77,7 @@ var Header = createReactClass({
     var buttonStyle = { display: showButton }
 
     var typeText;
-    if (this.state.show_typing) {
+    if (this.state.show_typing && showHeader) {
       typeText =  <Typist className="header-typist" avgTypingDelay={40} 
                                                     startDelay={200} 
                                                     onTypingDone={this.completeTyping}>
@@ -102,7 +102,7 @@ var Header = createReactClass({
           </div>
         </Fade>
 
-        <nav>  
+        <nav>
           <Fade big top when={this.state.show_icons} duration={1000}>
             <Link to="/skills"><GearSVG /></Link>
           </Fade>
