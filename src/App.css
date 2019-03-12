@@ -55,3 +55,13 @@ p {
   line-height: 1.8em;
   margin: 1em 0em;
 }
+
+.animaragraph {
+  width: 100%;
+  margin-left: 0em;
+  transition-duration: 0.4s;
+}
+
+.animaragraph:hover {
+  margin-left: 0.3em;
+}
