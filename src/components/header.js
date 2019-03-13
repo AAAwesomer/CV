@@ -1,8 +1,8 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { SchoolSVG, GearSVG, VideoSVG, AwardSVG } from './svgs.js'
 import Typist from 'react-typist';
-import { Link } from 'react-router-dom'
+
+import NavIcons from './navicons'
 
 var createReactClass = require('create-react-class');
 
@@ -81,23 +81,7 @@ var Header = createReactClass({
           </div>
         </Fade>
 
-        <nav>
-          <Fade big top when={this.state.show_icons} duration={1000}>
-            <Link to="/skills"><GearSVG /></Link>
-          </Fade>
-
-          <Fade big left when={this.state.show_icons} duration={1000}> 
-            <Link to="/achievements"><AwardSVG /></Link>
-          </Fade>
-
-          <Fade big right when={this.state.show_icons} duration={1000}>
-          <Link to="/education"><SchoolSVG /></Link>
-          </Fade>
-          
-          <Fade big bottom when={this.state.show_icons} duration={1000}>
-            <Link to="/video"><VideoSVG /></Link>
-          </Fade>
-        </nav>
+        <NavIcons show_icons={this.state.show_icons} />
 
         <Fade when={this.state.show_fade_text} bottom={true} duration={2000} distance={'0.2em'}>
           <span className={'fade-text'}> {this.state.fade_text_array[this.state.fade_text_index]} </span>
