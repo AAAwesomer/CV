@@ -20,13 +20,6 @@ var Header = createReactClass({
             fade_typing: true})
   },
 
-  componentWillMount(){
-    /* console.log(window.location.pathname)
-    if (window.location.pathname != '/' ) {
-      this.setState({header: false})
-    } */
-  },
-
   showFade() {
     var next_idx = (this.state.fade_text_index + 1) % this.state.fade_text_array.length
     this.setState({fade_text_index: next_idx})
@@ -98,7 +91,7 @@ var Header = createReactClass({
           </Fade>
 
           <Fade big right when={this.state.show_icons} duration={1000}>
-            <Link to="/education"><SchoolSVG /></Link>
+          <Link to="/education"><SchoolSVG /></Link>
           </Fade>
           
           <Fade big bottom when={this.state.show_icons} duration={1000}>
