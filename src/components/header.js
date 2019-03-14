@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 import Typist from 'react-typist';
 
 import NavIcons from './navicons'
+import Footer from './footer'
 
 var createReactClass = require('create-react-class');
 
@@ -10,32 +11,15 @@ var Header = createReactClass({
 
   getInitialState() {
     return({show_typing: true, 
-            fade_text_array: ["OOOUU ICONS :)", 
-                              "GEAR: SKILLS, MEDAL: ACHIEVEMENTS, SCHOOL BAG...you get it",
-                              "CLICK AN ICON TO FIND OUT MORE ABOUT ME!",
-                              "WHAT ARE YOU WAITING FOR???"],
-            fade_text_index: 0, 
-            show_fade_text: false, 
             show_icons: false,
-            fade_typing: true})
-  },
-
-  showFade() {
-    var next_idx = (this.state.fade_text_index + 1) % this.state.fade_text_array.length
-    this.setState({fade_text_index: next_idx})
-    this.setState({show_fade_text: true})
-    setTimeout(this.hideFade, 5000)
-  },
-
-  hideFade() {
-    this.setState({show_fade_text: false})
-    setTimeout(this.showFade, 10000)
+            fade_typing: true,
+            footer: false})
   },
 
   exitTyping(){
-    this.setState({show_typing: false})
-    this.setState({show_icons: true})
-    setTimeout(this.showFade, 3000)
+    this.setState({ show_typing: false,
+                    show_icons: true})
+    setTimeout(() => {this.setState({footer: true})}, 3000)
   },
 
   fadeTyping(){
@@ -66,6 +50,11 @@ var Header = createReactClass({
                     <span>NAVIGATE THROUGH MY WEBSITE.</span>
                   </Typist>
     }
+    
+    var footer;
+    if (this.state.footer) {
+      footer = <Footer />
+    }
 
     return (
       <header className="App-header">
@@ -80,11 +69,7 @@ var Header = createReactClass({
 
         <NavIcons show_icons={this.state.show_icons} />
 
-        <Fade when={this.state.show_fade_text} bottom={true} duration={2000} distance={'0.2em'}>
-          <span className={'fade-text'}> 
-            {this.state.fade_text_array[this.state.fade_text_index]}
-          </span>
-        </Fade>
+        {footer}
       </header>
     );
   }
