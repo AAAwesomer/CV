@@ -48,15 +48,12 @@ var Header = createReactClass({
   },
 
   render() {
-    var showHeader = ['/', 'home'].includes(window.location.pathname)
-    var headerDisplay = showHeader ? 'flex' : 'none'
-    var headerStyle = { display: headerDisplay }
 
     var showButton = this.state.show_typing ? 'block' : 'none'
     var buttonStyle = { display: showButton }
 
     var typeText;
-    if (this.state.show_typing && showHeader) {
+    if (this.state.show_typing) {
       typeText =  <Typist className="header-typist" avgTypingDelay={40} 
                                                     startDelay={200} 
                                                     onTypingDone={this.completeTyping}>
@@ -71,7 +68,7 @@ var Header = createReactClass({
     }
 
     return (
-      <header className="App-header" style={headerStyle}>
+      <header className="App-header">
         
         <Fade when={this.state.fade_typing} duration={200}>
           <div className='typeText'> {typeText} </div>
@@ -84,7 +81,9 @@ var Header = createReactClass({
         <NavIcons show_icons={this.state.show_icons} />
 
         <Fade when={this.state.show_fade_text} bottom={true} duration={2000} distance={'0.2em'}>
-          <span className={'fade-text'}> {this.state.fade_text_array[this.state.fade_text_index]} </span>
+          <span className={'fade-text'}> 
+            {this.state.fade_text_array[this.state.fade_text_index]}
+          </span>
         </Fade>
       </header>
     );
