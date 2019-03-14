@@ -15,19 +15,23 @@ var Footer = createReactClass({
   },
 
   componentDidMount() {
-    this.showFade()
+    this.timeout = setTimeout(this.showFade, 3000)
+  },
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout)
   },
 
   showFade() {
     var next_idx = (this.state.fade_text_index + 1) % this.state.fade_text_array.length
     this.setState({fade_text_index: next_idx})
     this.setState({show_fade_text: true})
-    setTimeout(this.hideFade, 6000)
+    this.timeout = setTimeout(this.hideFade, 6000)
   },
 
   hideFade() {
     this.setState({show_fade_text: false})
-    setTimeout(this.showFade, 8000)
+    this.timeout = setTimeout(this.showFade, 8000)
   },
 
   render() {

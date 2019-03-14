@@ -12,14 +12,18 @@ var Header = createReactClass({
   getInitialState() {
     return({show_typing: true, 
             show_icons: false,
-            fade_typing: true,
+            fade_typing: false,
             footer: false})
+  },
+
+  componentDidMount(){
+    this.setState({fade_typing: true})
   },
 
   exitTyping(){
     this.setState({ show_typing: false,
-                    show_icons: true})
-    setTimeout(() => {this.setState({footer: true})}, 3000)
+                    show_icons: true,
+                    footer: true})
   },
 
   fadeTyping(){
