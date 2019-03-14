@@ -22,12 +22,6 @@ var NavIcons = createReactClass({
   },
 
   render() {
-
-    /* var redirect;
-    if (this.state.redirect) {
-      redirect = <Redirect to={this.state.redirect} />
-    } */
-
     return (
       <nav>
         <Fade big top when={this.state.show_icons} duration={1000}>
@@ -45,8 +39,6 @@ var NavIcons = createReactClass({
         <Fade big bottom when={this.state.show_icons} duration={1000}>
         <div onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
         </Fade>
-
-        {/* redirect */}
       </nav>
     );
   }
