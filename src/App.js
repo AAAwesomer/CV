@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import './App.css';
-import Display from './components/display'
 import Header from './components/header'
 import Achievements from './components/achievements'
 import Education from './components/education'
@@ -18,7 +17,6 @@ var App = createReactClass({
       <div className="App">
         <Router>
           <div>
-            <Display />
             <Route exact path="/" component={Header} />
             <Route path="/education" component={Education} />
             <Route path="/skills" component={Skills} />
