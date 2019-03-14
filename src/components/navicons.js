@@ -25,11 +25,11 @@ var NavIcons = createReactClass({
     return (
       <nav>
         <Fade big top when={this.state.show_icons} duration={1000}>
-        <div onClick={this.go.bind(this, '/skills')}><GearSVG /></div>
+          <div onClick={this.go.bind(this, '/skills')}><GearSVG /></div>
         </Fade>
 
         <Fade big left when={this.state.show_icons} duration={1000}> 
-        <div onClick={this.go.bind(this, '/achievements')}><AwardSVG /></div>
+          <div onClick={this.go.bind(this, '/achievements')}><AwardSVG /></div>
         </Fade>
 
         <Fade big right when={this.state.show_icons} duration={1000}>
@@ -37,7 +37,7 @@ var NavIcons = createReactClass({
         </Fade>
         
         <Fade big bottom when={this.state.show_icons} duration={1000}>
-        <div onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
+          <div onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
         </Fade>
       </nav>
     );
