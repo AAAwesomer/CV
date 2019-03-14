@@ -38,10 +38,12 @@ var Footer = createReactClass({
 
     return (
       <div className="footer">
-        <Fade when={this.state.show_fade_text} bottom={true} duration={2000} distance={'0.2em'}>
-          <div className='fade-text'> 
-            {this.state.fade_text_array[this.state.fade_text_index]}
-          </div>
+        <Fade when={this.props.show_footer} bottom={true} duration={500} distance={'0.2em'}>
+          <Fade when={this.state.show_fade_text} bottom={true} duration={2000} distance={'0.2em'}>
+            <div className='fade-text'> 
+              {this.state.fade_text_array[this.state.fade_text_index]}
+            </div>
+          </Fade>
         </Fade>
       </div>
     );
