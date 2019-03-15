@@ -1,0 +1,48 @@
+
+.skills {
+  background: #9eefee;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.skills > div {
+  display: block;
+  position: absolute;
+  will-change: transform;
+  margin: 4vw 25vw;
+  width: 50vw;
+}
+
+.skills > div > div {
+  background-color: white;
+  background-size: auto 85%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: auto;
+  width: 45vh;
+  max-width: 300px;
+  min-width: 160px;
+  height: 85vh;
+  max-height: 570px;
+  min-height: 200px;
+  will-change: transform;
+  border-radius: 10px;
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+}
+
+.card-text {
+  text-align: center;
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  top: 20%;
+}
