@@ -1,11 +1,21 @@
 import React from 'react'
+import ThreeDCard from './3dcard/3dcard'
 
-var Achievements = () => {
-  return(
-    <div>
-      <h1>Achievements</h1>
-    </div>
-  )
-}
+var createReactClass = require('create-react-class');
+
+var Achievements = createReactClass({
+  render() {
+    return(
+      <div className='achievements'>
+        <ThreeDCard />
+        <ThreeDCard />
+        <ThreeDCard />
+        <ThreeDCard />
+        <ThreeDCard />
+        <ThreeDCard />
+      </div>
+    )
+  }
+})
 
 export default Achievements
