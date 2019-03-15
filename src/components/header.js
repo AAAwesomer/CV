@@ -1,6 +1,4 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
-import Typist from 'react-typist';
 
 import NavIcons from './navicons'
 import Footer from './footer'
@@ -23,7 +21,7 @@ var Header = createReactClass({
     this.setState({ show_icons: false,
                     show_footer: false})
                     
-    setTimeout(() => {this.props.history.push(to)}, 1000)
+    setTimeout(() => {this.props.history.push(to)}, 500)
   },
 
   
