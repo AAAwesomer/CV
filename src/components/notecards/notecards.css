@@ -1,6 +1,5 @@
 
 .skills {
-  background: #9eefee;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -11,6 +10,7 @@
   top: 0;
   width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .skills > div {
@@ -22,7 +22,6 @@
 }
 
 .skills > div > div {
-  background-color: white;
   background-size: auto 85%;
   background-repeat: no-repeat;
   background-position: center center;

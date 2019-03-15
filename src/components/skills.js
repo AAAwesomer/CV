@@ -1,5 +1,5 @@
 import React from 'react'
-import Deck from './cards/cards'
+import Deck from './notecards/notecards'
 
 var createReactClass = require('create-react-class');
 

@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import { useSprings, animated, interpolate } from 'react-spring'
 import { useGesture } from 'react-with-gesture'
-import './styles.css'
+import './notecards.css'
 
-const cards = [['Python', '7 months of work experience as a Software Developer at Affecto.'], ['ReactJS', 'Basic understanding, coded a couple websites in my life.'], ['Data Science', 'Libraries such as pandas, numpy and matplotlib'], ['Languages', 'English and Finnish fluent, 8 years abroad.'], ['Music', '3 years of active music production using Logic Pro X.'], ['Deep Learning', 'Built all kinds of models using Tensorflow/keras.']]
+var yellow = '#fcf98d'
+var blue = '#b7ddf4'
+var pink = '#f9b8ed'
+var green = '#daf7c8'
+
+const cards = [['Python', '7 months of work experience as a Software Developer at Affecto.', yellow], ['ReactJS', 'Basic understanding, coded a couple websites in my life.', blue], ['Data Science', 'Libraries such as pandas, numpy and matplotlib', green], ['Languages', 'English and Finnish fluent, 8 years abroad.', pink], ['Music', '3 years of active music production using Logic Pro X.', yellow], ['Deep Learning', 'Built all kinds of models using Tensorflow/keras.', blue]]
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 })
@@ -33,7 +38,7 @@ function Deck() {
   return props.map(({ x, y, rot, scale }, i) => (
     <animated.div key={i} style={{ transform: interpolate([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`) }}>
       {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
-      <animated.div {...bind(i)} style={{ transform: interpolate([rot, scale], trans)}}>
+      <animated.div {...bind(i)} style={{ transform: interpolate([rot, scale], trans), backgroundColor: cards[i][2]}}>
         <div className='card-text'>
           <h2>{cards[i][0]}</h2>
           <p>{cards[i][1]}</p>
