@@ -7,7 +7,7 @@ var Footer = createReactClass({
 
   getInitialState() {
     return({fade_text_array: ["OOOUU ICONS :)", 
-                              "GEAR: SKILLS, MEDAL: ACHIEVEMENTS, SCHOOL BAG...you get it",
+                              "GEAR: SKILLS, MEDAL: ACHIEV...you get it",
                               "CLICK AN ICON TO FIND OUT MORE ABOUT ME!",
                               "WHAT ARE YOU WAITING FOR???"],
             fade_text_index: 0, 
