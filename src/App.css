@@ -1,5 +1,5 @@
 .App {
-  background-color: white;
+  background: #fcfcfc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .App-header {
-  background-color: white;
+  background-color: #fcfcfc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,8 @@
   bottom: 2em;
   display: block;
   position: fixed;
+  width: 100em;
+
 }
 
 .fade-text {
@@ -71,3 +73,6 @@ p {
   margin-left: 0.3em;
 }
 
+.icon {
+  padding: 0.1em 0em;
+}
