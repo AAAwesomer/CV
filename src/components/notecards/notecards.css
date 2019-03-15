@@ -17,8 +17,8 @@
   display: block;
   position: absolute;
   will-change: transform;
-  margin: 4vw 25vw;
-  width: 50vw;
+  width: 100vw;
+  margin: 6vh 2vw;
 }
 
 .skills > div > div {
