@@ -1,3 +1,5 @@
+// Entire section is 6 3dcards wth different content.
+
 import React from 'react'
 import ThreeDCard from './3dcard/3dcard'
 
@@ -9,8 +11,6 @@ var card3 = "At 18, worked at Affecto/CGI for 7 months total providing customers
 var card4 = "Played 4 years of competitive football, winning our team numerous trophies throughout my time on the field."
 var card5 = "Started 2 companies in high school, one to raise funds for a charitable cause, another to stretch my own pockets."
 var card6 = "Composed hundreds of scores during 3 years in music production, collaborating with multiple different artists from different backgrounds."
-
-
 
 var Achievements = createReactClass({
   render() {
