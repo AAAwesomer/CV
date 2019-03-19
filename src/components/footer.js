@@ -1,3 +1,5 @@
+// footer for header which fades in/out with changing content
+
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
@@ -15,23 +17,25 @@ var Footer = createReactClass({
   },
 
   componentDidMount() {
-    this.timeout = setTimeout(this.showFade, 3000)
+    this.timeout = setTimeout(this.fadeIn, 3000)
   },
 
   componentWillUnmount() {
     clearTimeout(this.timeout)
   },
 
-  showFade() {
+  // sets next index in text array, shows text and calls timeout for fadeout
+  fadeIn() {
     var next_idx = (this.state.fade_text_index + 1) % this.state.fade_text_array.length
     this.setState({fade_text_index: next_idx})
     this.setState({show_fade_text: true})
-    this.timeout = setTimeout(this.hideFade, 6000)
+    this.timeout = setTimeout(this.fadeOut, 6000)
   },
 
-  hideFade() {
+  // hides text and calls timeout for fadein
+  fadeOut() {
     this.setState({show_fade_text: false})
-    this.timeout = setTimeout(this.showFade, 8000)
+    this.timeout = setTimeout(this.fadeIn, 8000)
   },
 
   render() {
