@@ -1,3 +1,5 @@
+// Uses react-typist to create initial interaction with user
+
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Typist from 'react-typist';
@@ -9,19 +11,20 @@ var Type = createReactClass({
 
   getInitialState() {
     return({exit: false,
-            fade_typing: false})
+            show_typing: false})
   },
 
   componentDidMount(){
-    this.setState({fade_typing: true})
+    this.setState({show_typing: true})
   },
 
   exit(){
     this.setState({exit: true})
   },
 
+  // sets timeout for exit in order to fade out before redirect
   fadeTyping(){
-    this.setState({fade_typing: false})
+    this.setState({show_typing: false})
     setTimeout(this.exit, 200)
   },
 
@@ -37,7 +40,7 @@ var Type = createReactClass({
 
     return (
       <div className="type">
-        <Fade when={this.state.fade_typing} duration={200}>
+        <Fade when={this.state.show_typing} duration={200}>
           <Typist className="header-typist" avgTypingDelay={50} 
                                             startDelay={400} 
                                             onTypingDone={this.completeTyping}>
