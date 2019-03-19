@@ -3,16 +3,25 @@ import ThreeDCard from './3dcard/3dcard'
 
 var createReactClass = require('create-react-class');
 
+var card1 = "Finished IB 2 years early, after just having turned 17, scoring the highest in Math HL and Physics HL out of the year."
+var card2 = "During 7th grade in Maunulan Peruskoulu, scored the highest number of points out of both 7th and 8th grades in the Kangaroo Test."
+var card3 = "At 18, worked at Affecto/CGI for 7 months total providing customers with practical AI solutions. One example was a facial recognition study we did for RUISROCK."
+var card4 = "Played 4 years of competitive football, winning our team numerous trophies throughout my time on the field."
+var card5 = "Started 2 companies in high school, one to raise funds for a charitable cause, another to stretch my own pockets."
+var card6 = "Composed hundreds of scores during 3 years in music production, collaborating with multiple different artists from different backgrounds."
+
+
+
 var Achievements = createReactClass({
   render() {
     return(
       <div className='achievements'>
-        <ThreeDCard />
-        <ThreeDCard />
-        <ThreeDCard />
-        <ThreeDCard />
-        <ThreeDCard />
-        <ThreeDCard />
+        <ThreeDCard text={card1}/>
+        <ThreeDCard text={card2}/>
+        <ThreeDCard text={card3}/>
+        <ThreeDCard text={card4}/>
+        <ThreeDCard text={card5}/>
+        <ThreeDCard text={card6}/>
       </div>
     )
   }
