@@ -1,3 +1,5 @@
+// Uses react-spring to create a card that focuses when hovered
+
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import './3dcard.css'
