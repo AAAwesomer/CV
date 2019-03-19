@@ -1,3 +1,5 @@
+// Icon navigation menu that uses react-reveal for fade ins, fade outs and pulsations
+
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 import { SchoolSVG, GearSVG, VideoSVG, AwardSVG } from './svgs.js'
@@ -13,11 +15,13 @@ var NavIcons = createReactClass({
     return({pulser: [0, 0, 0, 0]})
   },
 
+  // pulseTimeouts stores the array of timeouts set by handlePulse in one location
   componentDidMount(){
     this.pulseTimeouts = []
     this.pulseInterval = setInterval(this.handlePulse, 8000)
   },
 
+  // sets incrementing timeouts for icon pulses to create a wave effect
   handlePulse(){
     this.pulse(0)
     this.pulseTimeouts.push(setTimeout(() => {this.pulse(1)}, 400))
@@ -25,6 +29,7 @@ var NavIcons = createReactClass({
     this.pulseTimeouts.push(setTimeout(() => {this.pulse(3)}, 1200))
   },
 
+  // increments given index inside pulser to be detected by <Pulse>'s spy to trigger pulsation
   pulse(idx){
     var p = this.state.pulser.slice()
     p[idx] += 1
