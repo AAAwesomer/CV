@@ -1,3 +1,5 @@
+// Education section that fades in using react-reveal when mounted
+
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 
@@ -22,7 +24,7 @@ var Education = createReactClass({
                 These are the words I feel best describe my experience in educational 
                 institutions around the world.</p>
           
-          <p className='animaragraph'><span style={{fontWeight: 'bold', marginTop: '20px'}}>Curiosity. </span> 
+          <p className='animaragraph'><span style={{fontWeight: 'bold'}}>Curiosity. </span> 
                 At only the age of five, one of my favorite
                 pastimes was mathematics. I would go to my dad holding a 
                 piece of A4 paper and request for him to fill it with 
