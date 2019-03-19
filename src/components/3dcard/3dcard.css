@@ -16,7 +16,6 @@
   transition: box-shadow 0.5s;
   will-change: transform;
   margin: 2vw;
-  text-align: center;
 }
 
 .card:hover {
@@ -26,11 +25,13 @@
 .threedcard-text {
   margin: 0 auto;
   line-height: 2em;
-  font-size: calc(2px + 2vmin);
+  font-size: calc(8px + 1vmin);
   text-align: center;
+  display: block;
   position: absolute;
   width: 80%;
-  height: 80%;
-  margin: 10%;
-  top: 20%;
+  margin: 0 10%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
