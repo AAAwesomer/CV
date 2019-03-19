@@ -25,10 +25,10 @@
   background-repeat: no-repeat;
   background-position: center center;
   margin: auto;
-  width: 45vh;
+  width: 40vh;
   max-width: 300px;
   min-width: 160px;
-  height: 85vh;
+  height: 80vh;
   max-height: 570px;
   min-height: 200px;
   will-change: transform;
