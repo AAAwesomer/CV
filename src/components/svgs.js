@@ -1,3 +1,5 @@
+// svgs for navigation icons
+
 import React, { Component } from 'react'
 
 class SchoolSVG extends Component {
