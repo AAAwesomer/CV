@@ -1,3 +1,5 @@
+// Skills component displays only a card deck created in notecards.js
+
 import React from 'react'
 import Deck from './notecards/notecards'
 
