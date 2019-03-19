@@ -6,8 +6,8 @@ import './notecards.css'
 var color1 = '#1d3e53'
 var color2 = '#476d7c'
 var color3 = '#254b62'
-var color4 = '#77abb7'
-var color5 = '#dbc8b3'
+var color4 = '#70a2ad'
+var color5 = '#cebca7'
 var color6 = '#476d7c'
 
 const cards = [['Python', '7 months of work experience as a Software Developer at Affecto.', color1], ['ReactJS', 'Basic understanding. Coded a few websites, including this one.', color2], ['Data Science', 'Libraries such as pandas, numpy and matplotlib', color3], ['Languages', 'English and Finnish fluent, 8 years abroad.', color4], ['Music', '3 years of active music production using Logic Pro X.', color5], ['Deep Learning', 'Built all kinds of models using Keras and Tensorflow.', color6], ['Skills', '[swipe to view next]', color1]]
@@ -41,7 +41,7 @@ function Deck() {
     <animated.div key={i} style={{ transform: interpolate([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`) }}>
       {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
       <animated.div {...bind(i)} style={{ transform: interpolate([rot, scale], trans), backgroundColor: cards[i][2], color: 'white'}}>
-        <div className='card-text'>
+        <div className='notecard-text'>
           <h2>{cards[i][0]}</h2>
           <p>{cards[i][1]}</p>
         </div>

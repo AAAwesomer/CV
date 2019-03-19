@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
   color: black;
   position: absolute;
   left: 0;
@@ -37,7 +36,8 @@
   box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
 }
 
-.card-text {
+.notecard-text {
+  font-size: calc(8px + 2vmin);
   text-align: center;
   position: absolute;
   width: 80%;
