@@ -3,6 +3,7 @@ import { useSprings, animated, interpolate } from 'react-spring'
 import { useGesture } from 'react-with-gesture'
 import './notecards.css'
 
+// card colors
 var color1 = '#1d3e53'
 var color2 = '#476d7c'
 var color3 = '#254b62'
@@ -10,17 +11,26 @@ var color4 = '#70a2ad'
 var color5 = '#cebca7'
 var color6 = '#476d7c'
 
-const cards = [['Python', '7 months of work experience as a Software Developer at Affecto.', color1], ['ReactJS', 'Basic understanding. Coded a few websites, including this one.', color2], ['Data Science', 'Libraries such as pandas, numpy and matplotlib', color3], ['Languages', 'English and Finnish fluent, 8 years abroad.', color4], ['Music', '3 years of active music production using Logic Pro X.', color5], ['Deep Learning', 'Built all kinds of models using Keras and Tensorflow.', color6], ['Skills', '[swipe to view next]', color1]]
+// card titles, descriptions and colors stored in one array
+const cards = [ ['Python', '7 months of work experience as a Software Developer at Affecto.', color1], 
+                ['ReactJS', 'Basic understanding. Coded a few websites, including this one.', color2], 
+                ['Data Science', 'Libraries such as pandas, numpy and matplotlib', color3], 
+                ['Languages', 'English and Finnish fluent, 8 years abroad.', color4], 
+                ['Music', '3 years of active music production using Logic Pro X.', color5], 
+                ['Deep Learning', 'Built all kinds of models using Keras and Tensorflow.', color6], 
+                ['Skills', '[swipe to view next]', color1]]
 
 // These two are just helpers, they curate spring data, values that are later being interpolated into css
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 })
 const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5, y: -1000 })
+
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
 function Deck() {
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
   const [props, set] = useSprings(cards.length, i => ({ ...to(i), from: from(i) })) // Create a bunch of springs using the helpers above
+
   // Create a gesture, we're interested in down-state, delta (current-pos - click-pos), direction and velocity
   const bind = useGesture(({ args: [index], down, delta: [xDelta], distance, direction: [xDir], velocity }) => {
     const trigger = velocity > 0.2 // If you flick hard enough it should trigger the card to fly out
@@ -36,9 +46,11 @@ function Deck() {
     })
     if (!down && gone.size === cards.length) setTimeout(() => gone.clear() || set(i => to(i)), 600)
   })
+
   // Now we're just mapping the animated values to our view, that's it. Btw, this component only renders once. :-)
   return props.map(({ x, y, rot, scale }, i) => (
     <animated.div key={i} style={{ transform: interpolate([x, y], (x, y) => `translate3d(${x}px,${y}px,0)`) }}>
+
       {/* This is the card itself, we're binding our gesture to it (and inject its index so we know which is which) */}
       <animated.div {...bind(i)} style={{ transform: interpolate([rot, scale], trans), backgroundColor: cards[i][2], color: 'white'}}>
         <div className='notecard-text'>
