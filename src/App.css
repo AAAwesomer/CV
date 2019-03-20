@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
+  color: #3d2d0b;
   text-align: center;
 }
 
@@ -18,7 +18,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: black;
   text-align: center;
 }
 
@@ -91,6 +90,10 @@ p {
 
 .navicon {
   padding: 0 3vw;
+}
+
+.icon {
+  fill: #3d2d0b;
 }
 
 img.profile {
