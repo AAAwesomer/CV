@@ -81,6 +81,7 @@ p {
   display: inline-block;
   list-style-type: none;
   text-align: center;
+  margin-top: 6vh;
 }
 
 .navigation div {
@@ -89,10 +90,10 @@ p {
 }
 
 .navicon {
-  display: block;
-  padding: 0 2em;
+  padding: 0 3vw;
 }
 
-.icon {
-  padding: 0.1em 0em;
+img.profile {
+  height: 40vh;
+  width: 40vh;
 }

@@ -4,6 +4,8 @@ import React from 'react';
 import NavIcons from './navicons'
 import Footer from './footer'
 
+import profile from './SketchProfile.png'
+
 var createReactClass = require('create-react-class');
 
 var Header = createReactClass({
@@ -32,6 +34,7 @@ var Header = createReactClass({
 
     return (
       <header className="App-header">
+        <img className='profile' src={profile} alt="Profile" />
 
         <NavIcons show_icons={this.state.show_icons} redirect={this.redirect}/>
 
