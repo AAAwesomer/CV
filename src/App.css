@@ -21,6 +21,36 @@
   text-align: center;
 }
 
+img.profile {
+  height: 40vh;
+  width: 40vh;
+}
+
+.navigation {
+  height: 10vh;
+  width: 100vw;
+  min-width: 260px;
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+  margin-top: 6vh;
+}
+
+.navigation div {
+  position: relative; 
+  display: inline-block;
+}
+
+.navicon {
+  padding: 0 3vw;
+}
+
+.icon {
+  fill: #3d2d0b;
+  width: 2em;
+  height: 2em;
+}
+
 .footer {
   font-size: calc(4px + 2vmin);
   bottom: 2em;
@@ -71,32 +101,4 @@ p {
 
 .animaragraph:hover {
   margin-left: 0.3em;
-}
-
-.navigation {
-  height: 10vh;
-  width: 100vw;
-  min-width: 260px;
-  display: inline-block;
-  list-style-type: none;
-  text-align: center;
-  margin-top: 6vh;
-}
-
-.navigation div {
-  position: relative; 
-  display: inline-block;
-}
-
-.navicon {
-  padding: 0 3vw;
-}
-
-.icon {
-  fill: #3d2d0b;
-}
-
-img.profile {
-  height: 40vh;
-  width: 40vh;
 }
