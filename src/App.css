@@ -51,6 +51,16 @@ img.profile {
   height: 2em;
 }
 
+#skill-svg {
+  width: 2.3em;
+  height: 2.3em;
+}
+
+#school-svg {
+  width: 2.3em;
+  height: 2.3em;
+}
+
 .footer {
   font-size: calc(4px + 2vmin);
   bottom: 2em;

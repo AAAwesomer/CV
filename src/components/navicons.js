@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { withRouter } from 'react-router-dom'
-import { SchoolSVG, GearSVG, VideoSVG, AwardSVG } from './svgs.js'
+import { SchoolSVG, SkillSVG, VideoSVG, AchievementSVG } from './svgs.js'
 
 import Fade from 'react-reveal/Fade';
 import Pulse from 'react-reveal/Pulse';
@@ -53,14 +53,14 @@ var NavIcons = createReactClass({
         <div>
           <Fade big top when={this.props.show_icons} duration={1000}>
             <Pulse spy={this.state.pulser[0]}>
-              <div className="navicon" onClick={this.go.bind(this, '/skills')}><GearSVG /></div>
+              <div className="navicon" onClick={this.go.bind(this, '/skills')}><SkillSVG /></div>
             </Pulse>
           </Fade>
         </div>
         <div>
           <Fade big left when={this.props.show_icons} duration={1000}> 
             <Pulse spy={this.state.pulser[1]}>
-              <div className="navicon" onClick={this.go.bind(this, '/achievements')}><AwardSVG /></div>
+              <div className="navicon" onClick={this.go.bind(this, '/achievements')}><AchievementSVG /></div>
             </Pulse>
           </Fade>
         </div>
