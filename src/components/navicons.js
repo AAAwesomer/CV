@@ -5,43 +5,10 @@ import { withRouter } from 'react-router-dom'
 import { SchoolSVG, SkillSVG, VideoSVG, AchievementSVG } from './svgs.js'
 
 import Fade from 'react-reveal/Fade';
-import Pulse from 'react-reveal/Pulse';
 
 var createReactClass = require('create-react-class');
 
 var NavIcons = createReactClass({
-
-  getInitialState(){
-    return({pulser: [0, 0, 0, 0]})
-  },
-
-  // pulseTimeouts stores the array of timeouts set by handlePulse in one location
-  componentDidMount(){
-    this.pulseTimeouts = []
-    this.pulseInterval = setInterval(this.handlePulse, 8000)
-  },
-
-  // sets incrementing timeouts for icon pulses to create a wave effect
-  handlePulse(){
-    this.pulse(0)
-    this.pulseTimeouts.push(setTimeout(() => {this.pulse(1)}, 400))
-    this.pulseTimeouts.push(setTimeout(() => {this.pulse(2)}, 800))
-    this.pulseTimeouts.push(setTimeout(() => {this.pulse(3)}, 1200))
-  },
-
-  // increments given index inside pulser to be detected by <Pulse>'s spy to trigger pulsation
-  pulse(idx){
-    var p = this.state.pulser.slice()
-    p[idx] += 1
-    this.setState({pulser: p})
-  },
-
-  componentWillUnmount(){
-    clearInterval(this.pulseInterval)
-    this.pulseTimeouts.forEach(t => {
-      clearTimeout(t)
-    });
-  },
 
   go(to){
     this.props.redirect(to)
@@ -52,30 +19,22 @@ var NavIcons = createReactClass({
       <nav className="navigation">
         <div>
           <Fade big top when={this.props.show_icons} duration={1000}>
-            <Pulse spy={this.state.pulser[0]}>
-              <div className="navicon" onClick={this.go.bind(this, '/skills')}><SkillSVG /></div>
-            </Pulse>
+            <div className="navicon" onClick={this.go.bind(this, '/skills')}><SkillSVG /></div>
           </Fade>
         </div>
         <div>
           <Fade big left when={this.props.show_icons} duration={1000}> 
-            <Pulse spy={this.state.pulser[1]}>
-              <div className="navicon" onClick={this.go.bind(this, '/achievements')}><AchievementSVG /></div>
-            </Pulse>
+            <div className="navicon" onClick={this.go.bind(this, '/achievements')}><AchievementSVG /></div>
           </Fade>
         </div>
         <div>
           <Fade big right when={this.props.show_icons} duration={1000}>
-            <Pulse spy={this.state.pulser[2]}>
-              <div className="navicon" onClick={this.go.bind(this, '/education')}><SchoolSVG /></div>
-            </Pulse>
+            <div className="navicon" onClick={this.go.bind(this, '/education')}><SchoolSVG /></div>
           </Fade>
         </div>
         <div>
           <Fade big bottom when={this.props.show_icons} duration={1000}>
-            <Pulse spy={this.state.pulser[3]}>
-              <div className="navicon" onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
-            </Pulse>
+            <div className="navicon" onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
           </Fade>
         </div>
       </nav>
