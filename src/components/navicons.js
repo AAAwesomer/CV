@@ -49,30 +49,35 @@ var NavIcons = createReactClass({
 
   render() {
     return (
-      <nav>
-        <Fade big top when={this.props.show_icons} duration={1000}>
-          <Pulse spy={this.state.pulser[0]}>
-            <div onClick={this.go.bind(this, '/skills')}><GearSVG /></div>
-          </Pulse>
-        </Fade>
-
-        <Fade big left when={this.props.show_icons} duration={1000}> 
-          <Pulse spy={this.state.pulser[1]}>
-            <div onClick={this.go.bind(this, '/achievements')}><AwardSVG /></div>
-          </Pulse>
-        </Fade>
-
-        <Fade big right when={this.props.show_icons} duration={1000}>
-          <Pulse spy={this.state.pulser[2]}>
-            <div onClick={this.go.bind(this, '/education')}><SchoolSVG /></div>
-          </Pulse>
-        </Fade>
-        
-        <Fade big bottom when={this.props.show_icons} duration={1000}>
-          <Pulse spy={this.state.pulser[3]}>
-            <div onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
-          </Pulse>
-        </Fade>
+      <nav className="navigation">
+        <div>
+          <Fade big top when={this.props.show_icons} duration={1000}>
+            <Pulse spy={this.state.pulser[0]}>
+              <div className="navicon" onClick={this.go.bind(this, '/skills')}><GearSVG /></div>
+            </Pulse>
+          </Fade>
+        </div>
+        <div>
+          <Fade big left when={this.props.show_icons} duration={1000}> 
+            <Pulse spy={this.state.pulser[1]}>
+              <div className="navicon" onClick={this.go.bind(this, '/achievements')}><AwardSVG /></div>
+            </Pulse>
+          </Fade>
+        </div>
+        <div>
+          <Fade big right when={this.props.show_icons} duration={1000}>
+            <Pulse spy={this.state.pulser[2]}>
+              <div className="navicon" onClick={this.go.bind(this, '/education')}><SchoolSVG /></div>
+            </Pulse>
+          </Fade>
+        </div>
+        <div>
+          <Fade big bottom when={this.props.show_icons} duration={1000}>
+            <Pulse spy={this.state.pulser[3]}>
+              <div className="navicon" onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
+            </Pulse>
+          </Fade>
+        </div>
       </nav>
     );
   }

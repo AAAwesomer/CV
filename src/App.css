@@ -74,6 +74,25 @@ p {
   margin-left: 0.3em;
 }
 
+.navigation {
+  height: 10vh;
+  width: 100vw;
+  min-width: 260px;
+  display: inline-block;
+  list-style-type: none;
+  text-align: center;
+}
+
+.navigation div {
+  position: relative; 
+  display: inline-block;
+}
+
+.navicon {
+  display: block;
+  padding: 0 2em;
+}
+
 .icon {
   padding: 0.1em 0em;
 }
