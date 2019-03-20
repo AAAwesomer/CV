@@ -4,6 +4,8 @@ import React from 'react';
 import NavIcons from './navicons'
 import Footer from './footer'
 
+import Fade from 'react-reveal/Fade';
+
 import profile from './SketchProfile.png'
 
 var createReactClass = require('create-react-class');
@@ -16,8 +18,10 @@ var Header = createReactClass({
   },
 
   componentDidMount(){
-    this.setState({ show_icons: true,
-                    show_footer: true})
+    setTimeout(() => {
+      this.setState({ show_icons: true,
+                      show_footer: true})
+      }, 200)
   },
 
   // hides icons and footer before redirect
@@ -32,9 +36,12 @@ var Header = createReactClass({
 
     return (
       <header className="App-header">
-        <img className='profile' src={profile} alt="Profile" />
-
-        <NavIcons show_icons={this.state.show_icons} redirect={this.redirect}/>
+        <Fade top when={this.state.show_icons} duration={1000} distance={'0.2em'}>
+          <img className='profile' src={profile} alt="Profile" />
+        </Fade>
+        <Fade bottom when={this.state.show_icons} duration={1000} distance={'0.2em'}>
+          <NavIcons redirect={this.redirect}/>
+        </Fade>
 
         <Footer show_footer={this.state.show_footer}/> 
 
