@@ -28,8 +28,6 @@ var Header = createReactClass({
     setTimeout(() => {this.props.history.push(to)}, 500)
   },
 
-  
-
   render() {
 
     return (
