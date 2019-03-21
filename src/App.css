@@ -33,7 +33,7 @@ img.profile {
   display: inline-block;
   list-style-type: none;
   text-align: center;
-  margin-top: 6vh;
+  margin-top: 4vh;
 }
 
 .navigation div {
@@ -42,7 +42,7 @@ img.profile {
 }
 
 .navicon {
-  padding: 0 3vw;
+  padding: 0 2.3vw;
 }
 
 .icon {
@@ -59,6 +59,20 @@ img.profile {
 #school-svg {
   width: 2.3em;
   height: 2.3em;
+}
+
+.header-text {
+  margin-top: 0.5vh;
+}
+
+.header-text .name {
+  font-size: calc(20px + 2vmin);
+  font-weight: 500;
+}
+
+.header-text .title {
+  margin-top: 1vh;
+  font-size: calc(2px + 2vmin);
 }
 
 .footer {
