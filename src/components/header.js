@@ -5,6 +5,7 @@ import NavIcons from './navicons'
 import Footer from './footer'
 
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom'
 
 import profile from './SketchProfile.png'
 
@@ -48,7 +49,9 @@ var Header = createReactClass({
           </div>
         </Fade>
 
-        <Footer show_footer={this.state.show_footer}/> 
+        <Footer show_footer={this.state.show_footer}/>
+
+        <div className="credits">© 2019 Aarni Alasaarela | <Link className="credits-link" to='credits'>Credits</Link></div>
 
       </header>
     );

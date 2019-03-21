@@ -77,10 +77,37 @@ img.profile {
 
 .footer {
   font-size: calc(2px + 2vmin);
-  bottom: 2em;
+  bottom: 6vh;
   display: block;
   position: fixed;
   width: 100em;
+}
+
+.credits {
+  font-size: calc(1px + 1.2vmin);
+  bottom: 0.8em;
+  display: block;
+  position: fixed;
+  width: 100em;
+}
+
+.credits-list {
+  text-align: left;
+  line-height: 2em;
+  font-size: calc(6px + 2vmin)
+}
+
+.credits-list li {
+  margin: 1em 0em;
+}
+
+a {
+  color: #3d2d0b;
+  text-decoration: underline;
+}
+
+.credits-link {
+  text-decoration: none;
 }
 
 .fade-text {
@@ -89,7 +116,7 @@ img.profile {
 
 .skip-button {
   font-size: calc(4px + 2vmin);
-  padding: 0.4em 1.2em;
+  padding: 0.3em 1.2em;
   text-decoration: none;
   color: #3d2d0b;
   background-color: white;

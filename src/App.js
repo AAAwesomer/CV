@@ -8,6 +8,7 @@ import Achievements from './components/achievements'
 import Education from './components/education'
 import Skills from './components/skills'
 import Video from './components/video'
+import Credits from './components/credits'
 
 var createReactClass = require('create-react-class');
 
@@ -24,6 +25,7 @@ var App = createReactClass({
             <Route path="/skills" component={Skills} />
             <Route path="/achievements" component={Achievements} />
             <Route path="/video" component={Video} />
+            <Route path="/credits" component={Credits} />
           </div>
         </Router>
       </div> 
