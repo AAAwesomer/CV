@@ -44,17 +44,17 @@ var Type = createReactClass({
           <Typist className="header-typist" avgTypingDelay={50} 
                                             startDelay={400} 
                                             onTypingDone={this.completeTyping}>
-            <span>HELLO, AND WELCOME TO MY RESUM</span>
+            <span>Hello, and welcome to my resum</span>
               <Typist.Backspace count={5} delay={200} />
-            <span>ONLINE CV.</span>
+            <span>online cv.</span>
               <Typist.Backspace count={35} delay={400} />
-            <span>USE THESE ICONS TO FIN</span>
+            <span>Use these icons to fin</span>
               <Typist.Backspace count={3} delay={200} />
-            <span>NAVIGATE THROUGH MY WEBSITE.</span>
+            <span>navigate through my website.</span>
           </Typist>
 
           <div className='btn'>
-            <button className='skip-button' onClick={this.exit}>SKIP</button>
+            <button className='skip-button' onClick={this.exit}>Skip</button>
           </div>
         </Fade>
 
