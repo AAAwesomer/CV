@@ -76,12 +76,11 @@ img.profile {
 }
 
 .footer {
-  font-size: calc(4px + 2vmin);
+  font-size: calc(2px + 2vmin);
   bottom: 2em;
   display: block;
   position: fixed;
   width: 100em;
-
 }
 
 .fade-text {
@@ -90,17 +89,19 @@ img.profile {
 
 .skip-button {
   font-size: calc(4px + 2vmin);
-  padding: 0.3em 1em;
+  padding: 0.4em 1.2em;
   text-decoration: none;
-  color: white;
-  background-color: black;
-  transition: .1s;
+  color: #3d2d0b;
+  background-color: white;
+  transition: .2s;
   margin-top: 16px;
+  border: 2px solid #3d2d0b;
+  border-radius: 100px;
 }
 
 .skip-button:hover {
-  margin-top: 10px;
-  margin-bottom: 6px
+  color: white;
+  background-color: #3d2d0b;
 }
 
 .attr {
