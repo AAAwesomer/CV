@@ -20,8 +20,9 @@
   margin: 6vh 2vw;
 }
 
-.skills > div > div {
-  background-size: auto 85%;
+.notecard {
+  background-image: url('../../old-paper-texture.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   margin: auto;
