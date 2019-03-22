@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 class Credits extends Component {
   render(){
     return(
-      <div className="credits-page">
+      <div className="credits">
         <h1>Credits</h1>
         <ul className='credits-list'>
           <li>Bulb icon made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></li>

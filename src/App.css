@@ -83,7 +83,7 @@ img.profile {
   width: 100em;
 }
 
-.credits {
+.footnote {
   font-size: calc(1px + 1.2vmin);
   bottom: 0.8em;
   display: block;
@@ -91,10 +91,14 @@ img.profile {
   width: 100em;
 }
 
+.credits {
+  margin: 5vw
+}
+
 .credits-list {
   text-align: left;
   line-height: 2em;
-  font-size: calc(6px + 2vmin)
+  font-size: calc(4px + 2vmin);
 }
 
 .credits-list li {
