@@ -98,6 +98,15 @@ img.profile {
   width: 100em;
 }
 
+a {
+  color: #3d2d0b;
+  text-decoration: underline;
+}
+
+.footnote-link {
+  text-decoration: none;
+}
+
 .credits {
   margin: 5vw
 }
@@ -110,15 +119,6 @@ img.profile {
 
 .credits-list li {
   margin: 1em 0em;
-}
-
-a {
-  color: #3d2d0b;
-  text-decoration: underline;
-}
-
-.credits-link {
-  text-decoration: none;
 }
 
 .fade-text {

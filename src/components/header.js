@@ -51,7 +51,7 @@ var Header = createReactClass({
 
         <Footer show_footer={this.state.show_footer}/>
 
-        <div className="footnote">© 2019 Aarni Alasaarela | <Link className="credits-link" to='credits'>Credits</Link></div>
+        <div className="footnote">© 2019 Aarni Alasaarela | <a className='footnote-link' href="https://www.linkedin.com/in/aarnia/">linkedin</a> | <a className='footnote-link' href="https://github.com/AAAwesomer">GitHub</a> | <Link className='footnote-link' to='credits'>Credits</Link> | +358452471918</div>
 
       </header>
     );
