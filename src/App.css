@@ -129,11 +129,8 @@ a {
   text-decoration: none;
 }
 
-.credits {
-  margin: 5vw
-}
-
 .credits-list {
+  margin: 0vh 10vw;
   text-align: left;
   line-height: 2em;
   font-size: calc(4px + 2vmin);
