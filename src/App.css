@@ -140,6 +140,7 @@ a {
   background-color: #fcfcfc;
   color: #3d2d0b;
   border: 0px solid #3d2d0b;
+  cursor: pointer;
 }
 
 .button:focus {
@@ -206,5 +207,5 @@ p {
 
 .video-btn {
   display: inline-block;
-  padding: 0 15vw;
+  margin: 0 15vw;
 }
