@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { withRouter } from 'react-router-dom'
-import { SchoolSVG, SkillSVG, VideoSVG, AchievementSVG } from './svgs.js'
+import { SchoolSVG, SkillSVG, VideoSVG, AchievementSVG, MailSVG } from './svgs.js'
 
 var createReactClass = require('create-react-class');
 
@@ -26,6 +26,9 @@ var NavIcons = createReactClass({
         </div>
         <div>
           <div className="navicon" onClick={this.go.bind(this, '/video')}><VideoSVG /></div>
+        </div>
+        <div>
+          <div className="navicon"><a href="mailto:aarni.alasaarela@gmail.com?subject=Response To CV"><MailSVG /></a></div>
         </div>
       </nav>
     );
