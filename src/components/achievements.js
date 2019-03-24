@@ -1,7 +1,9 @@
 // Entire section is 6 3dcards wth different content.
 
 import React from 'react'
+
 import ThreeDCard from './3dcard/3dcard'
+import { HomeSVG } from './svgs'
 
 var createReactClass = require('create-react-class');
 
@@ -13,15 +15,25 @@ var card5 = "Started 2 companies in high school, one to raise funds for a charit
 var card6 = "Composed hundreds of scores during 3 years in music production, collaborating with multiple different artists from different backgrounds."
 
 var Achievements = createReactClass({
+
+  goHome(){
+    this.props.history.push('/home')
+  },
+
   render() {
     return(
       <div className='achievements'>
-        <ThreeDCard text={card1}/>
-        <ThreeDCard text={card2}/>
-        <ThreeDCard text={card3}/>
-        <ThreeDCard text={card4}/>
-        <ThreeDCard text={card5}/>
-        <ThreeDCard text={card6}/>
+        <div className='home-btn-container'>
+          <div className='navicon' id="home-btn" onClick={this.goHome}><HomeSVG /></div>
+        </div>
+        <div className='achievement-cards'>
+          <ThreeDCard text={card1}/>
+          <ThreeDCard text={card2}/>
+          <ThreeDCard text={card3}/>
+          <ThreeDCard text={card4}/>
+          <ThreeDCard text={card5}/>
+          <ThreeDCard text={card6}/>
+        </div>
       </div>
     )
   }

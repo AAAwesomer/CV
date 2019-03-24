@@ -2,7 +2,13 @@
 .achievements {
   width: 100vw;
   min-height: 100vh;
-  padding: 5vh 5vw;
+}
+
+.achievement-cards {
+  position: absolute;
+  width: 100vw;
+  min-height: 90vh;
+  top: 10vh;
 }
 
 .card {
