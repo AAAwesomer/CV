@@ -6,9 +6,9 @@
   color: #3d2d0b;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 10vh;
   width: 100vw;
-  min-height: 100vh;
+  min-height: 90vh;
   overflow: hidden;
 }
 
@@ -17,7 +17,6 @@
   position: absolute;
   will-change: transform;
   width: 100vw;
-  margin: 10vh 0;
 }
 
 .notecard {
@@ -25,7 +24,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin: 0 auto;
+  margin: 2vh auto;
   width: 40vh;
   min-width: 160px;
   max-width: 70vw;
