@@ -17,7 +17,7 @@
   position: absolute;
   will-change: transform;
   width: 100vw;
-  margin: 6vh 2vw;
+  margin: 10vh 0;
 }
 
 .notecard {
@@ -25,12 +25,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  margin: auto;
+  margin: 0 auto;
   width: 40vh;
-  max-width: 300px;
   min-width: 160px;
+  max-width: 70vw;
   height: 80vh;
-  max-height: 570px;
   min-height: 200px;
   will-change: transform;
   border-radius: 10px;
