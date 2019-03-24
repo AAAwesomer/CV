@@ -21,6 +21,12 @@
   text-align: center;
 }
 
+.copied {
+  display: block;
+  position: fixed;
+  top: 4vh;
+}
+
 img.profile {
   height: 40vh;
   width: 40vh;
