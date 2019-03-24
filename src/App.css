@@ -42,7 +42,11 @@ img.profile {
 }
 
 .navicon {
-  padding: 0 2.3vw;
+  margin: 0 2.3vw;
+}
+
+.navicon:hover {
+  cursor: pointer;
 }
 
 .icon {
