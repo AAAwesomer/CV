@@ -83,15 +83,16 @@ img.profile {
 }
 
 .footer {
-  font-size: calc(2px + 2vmin);
-  bottom: 6vh;
+  font-size: calc(3px + 2vmin);
+  bottom: 4vh;
   display: block;
   position: fixed;
   width: 100em;
+  margin-bottom: 1.3em;
 }
 
 .footnote {
-  font-size: calc(1px + 1.2vmin);
+  font-size: calc(1px + 1.6vmin);
   bottom: 0.8em;
   display: block;
   position: fixed;
