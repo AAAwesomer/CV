@@ -54,7 +54,7 @@ var Type = createReactClass({
           </Typist>
 
           <div className='btn'>
-            <button className='skip-button' onClick={this.exit}>Skip</button>
+            <button className='button' id="typist-button" onClick={this.exit}>Skip</button>
           </div>
         </Fade>
 
