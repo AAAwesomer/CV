@@ -7,7 +7,7 @@ import Footer from './footer'
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom'
 
-import profile from './SketchProfile.png'
+import profile from '../images/sketch-profile.png'
 
 var createReactClass = require('create-react-class');
 
