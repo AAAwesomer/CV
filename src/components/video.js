@@ -20,6 +20,8 @@ var Video = createReactClass({
     if (this.state.showNew) {
       frame = <iframe title="CWideo2019" width="560" height="315" src="https://www.youtube.com/embed/OJJVzHpAl08" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     }
+    var newWeight = this.state.showNew ? '600' : '400'
+    var oldWeight = this.state.showNew ? '400' : '600'
 
     return(
       <div className='video'>
@@ -28,10 +30,10 @@ var Video = createReactClass({
         </div>
         <div className='video-select'>
           <div className='video-btn'>
-            <button className='button' onClick={this.showNew}>2019</button>
+            <button className='button' onClick={this.showNew} style={{fontWeight: newWeight}}>2019</button>
           </div>
           <div className='video-btn'>
-            <button className='button' onClick={this.showOld}>2017</button>
+            <button className='button' onClick={this.showOld} style={{fontWeight: oldWeight}}>2017</button>
           </div>
         </div>
       </div>

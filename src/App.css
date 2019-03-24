@@ -127,27 +127,19 @@ a {
 }
 
 .button {
-  font-size: calc(4px + 2vmin);
-  padding: 0.3em 1.2em;
+  font-size: calc(2px + 2vmin);
   text-decoration: none;
+  background-color: #fcfcfc;
   color: #3d2d0b;
-  background-color: white;
-  transition: .2s;
-  border: 1px solid #3d2d0b;
-  border-radius: 100px;
+  border: 0px solid #3d2d0b;
+}
+
+.button:focus {
+  outline: 0;
 }
 
 #typist-button {
   margin-top: 16px;
-}
-
-.button:hover {
-  color: white;
-  background-color: #3d2d0b;
-}
-
-.button:focus {
-  outline: 0
 }
 
 .attr {
@@ -201,5 +193,5 @@ p {
 
 .video-btn {
   display: inline-block;
-  padding: 0 10vw;
+  padding: 0 15vw;
 }
