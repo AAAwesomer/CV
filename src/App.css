@@ -88,11 +88,10 @@ img.profile {
 
 .footer {
   font-size: calc(3px + 2vmin);
-  bottom: 4vh;
+  bottom: 6vh;
   display: block;
   position: fixed;
   width: 100em;
-  margin-bottom: 1.3em;
 }
 
 .footnote {
