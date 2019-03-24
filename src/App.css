@@ -126,21 +126,28 @@ a {
   margin: 0 auto
 }
 
-.skip-button {
+.button {
   font-size: calc(4px + 2vmin);
   padding: 0.3em 1.2em;
   text-decoration: none;
   color: #3d2d0b;
   background-color: white;
   transition: .2s;
-  margin-top: 16px;
-  border: 2px solid #3d2d0b;
+  border: 1px solid #3d2d0b;
   border-radius: 100px;
 }
 
-.skip-button:hover {
+#typist-button {
+  margin-top: 16px;
+}
+
+.button:hover {
   color: white;
   background-color: #3d2d0b;
+}
+
+.button:focus {
+  outline: 0
 }
 
 .attr {
@@ -165,4 +172,34 @@ p {
 
 .animaragraph:hover {
   margin-left: 0.3em;
+}
+
+.video-wrapper {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90vh;
+}
+
+.video-wrapper iframe {
+  background: white;
+  position: relative;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+}
+
+.video-select {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 90vh;
+  width: 100vw;
+}
+
+.video-btn {
+  display: inline-block;
+  padding: 0 10vw;
 }
