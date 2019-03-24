@@ -33,6 +33,10 @@ var Header = createReactClass({
     setTimeout(() => {this.props.history.push(to)}, 600)
   },
 
+  copy(){
+    console.log('hi')
+  },
+
   render() {
 
     return (
@@ -51,7 +55,13 @@ var Header = createReactClass({
 
         <Footer show_footer={this.state.show_footer}/>
 
-        <div className="footnote">© 2019 Aarni Alasaarela | <a className='footnote-link' href="https://www.linkedin.com/in/aarnia/">linkedin</a> | <a className='footnote-link' href="https://github.com/AAAwesomer">GitHub</a> | <Link className='footnote-link' to='credits'>Credits</Link> | +358452471918</div>
+        <div className="footnote">
+          © 2019 Aarni Alasaarela | <a className='footnote-link' href="https://www.linkedin.com/in/aarnia/"
+          >linkedin</a> | <a className='footnote-link' href="https://github.com/AAAwesomer"
+          >GitHub</a> | <Link className='footnote-link' to='credits'
+          >Credits</Link> | <button className='button' id='number' onClick={this.copy}
+          >+358452471918</button>
+        </div>
 
       </header>
     );

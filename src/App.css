@@ -139,17 +139,22 @@ a {
   text-decoration: none;
   background-color: #fcfcfc;
   color: #3d2d0b;
-  border: 0px solid #3d2d0b;
+  border: 0;
   cursor: pointer;
+  padding: 0;
 }
 
 .button:focus {
   outline: 0;
 }
 
-#typist-button {
+.button#typist-button {
   font-size: calc(2px + 1.8vmin);
   margin-top: 16px;
+}
+
+.button#number {
+  font-size: calc(1px + 1.6vmin);
 }
 
 .type {
