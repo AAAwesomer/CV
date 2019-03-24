@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { HomeSVG } from './svgs'
+
 var createReactClass = require('create-react-class');
 
 var Video = createReactClass({
@@ -15,6 +17,10 @@ var Video = createReactClass({
     this.setState({showNew: false})
   },
 
+  goHome(){
+    this.props.history.push('/home')
+  },
+
   render(){
     var frame = <iframe title="CWideo2017" width="560" height="315" src="https://www.youtube.com/embed/7a1qOxTC5E8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     if (this.state.showNew) {
@@ -25,6 +31,9 @@ var Video = createReactClass({
 
     return(
       <div className='video'>
+        <div className='home-btn-container'>
+          <div className='navicon' id="home-btn" onClick={this.goHome}><HomeSVG /></div>
+        </div>
         <div className='video-wrapper'>
           {frame}
         </div>

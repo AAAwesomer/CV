@@ -82,6 +82,12 @@ img.profile {
   stroke-width: 0.2em;
 }
 
+#home-svg {
+  width: 1em;
+  height: 1em;
+  stroke-width: 0.1em;
+}
+
 .header-text {
   margin-top: 0.5vh;
 }
@@ -191,18 +197,17 @@ p {
 .video-wrapper {
   display: block;
   position: absolute;
-  top: 0;
+  top: 10vh;
   left: 0;
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
 }
 
 .video-wrapper iframe {
   background: white;
   position: relative;
   width: 90%;
-  height: 90%;
-  top: 5%;
+  height: 100%;
 }
 
 .video-select {
@@ -211,9 +216,22 @@ p {
   left: 0;
   top: 90vh;
   width: 100vw;
+  height: 10vh;
 }
 
 .video-btn {
   display: inline-block;
-  margin: 0 15vw;
+  margin: 2.5vh 15vw;
+}
+
+.home-btn-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+}
+
+#home-btn {
+  margin-top: 3.2vh;
 }
