@@ -1,5 +1,5 @@
 
-.skills {
+.deck-container {
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.skills > div {
+.deck-container > div {
   display: block;
   position: absolute;
   will-change: transform;
