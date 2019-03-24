@@ -1,11 +1,12 @@
 // header component with simple navigation menu and footer
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
+import CopyToClipboard from 'react-copy-to-clipboard';
+
 import NavIcons from './navicons'
 import Footer from './footer'
-
-import Fade from 'react-reveal/Fade';
-import { Link } from 'react-router-dom'
 
 import profile from '../images/sketch-profile.png'
 
@@ -35,7 +36,7 @@ var Header = createReactClass({
     setTimeout(() => {this.props.history.push(to)}, 600)
   },
 
-  copy(){
+  copied(){
     clearTimeout(this.timeout)
     this.setState({show_copied: true})
     this.timeout = setTimeout(() => {this.setState({show_copied: false})}, 5000)
@@ -72,8 +73,8 @@ var Header = createReactClass({
           © 2019 Aarni Alasaarela | <a className='footnote-link' href="https://www.linkedin.com/in/aarnia/"
           >linkedin</a> | <a className='footnote-link' href="https://github.com/AAAwesomer"
           >GitHub</a> | <Link className='footnote-link' to='credits'
-          >Credits</Link> | <button className='button' id='number' onClick={this.copy}
-          >+358452471918</button>
+          >Credits</Link> | <CopyToClipboard text={'+358452471918'} onCopy={this.copied}
+          ><span className='footnote-link'>+358452471918</span></CopyToClipboard>
         </div>
 
       </header>

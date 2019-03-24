@@ -119,6 +119,7 @@ a {
 }
 
 .footnote-link {
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -157,10 +158,6 @@ a {
 .button#typist-button {
   font-size: calc(2px + 1.8vmin);
   margin-top: 16px;
-}
-
-.button#number {
-  font-size: calc(1px + 1.6vmin);
 }
 
 .type {
