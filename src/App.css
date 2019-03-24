@@ -170,13 +170,22 @@ a {
   font-size: calc(6px + 2vmin)
 }
 
-.attr {
+.column-container {
+  position: absolute;
+  top: 10vh;
+  left: 0;
   font-size: calc(8px + 2vmin);
-  text-align: left;
+  text-align: center;
   display: inline-block;
+  width: 100vw;
+}
+
+.column {
+  margin: auto;
+  text-align: left;
   width: 50%;
-  margin: 5% 0% 8% 0%;
   min-width: 240px;
+  margin-bottom: 10vh;
 }
 
 p {
