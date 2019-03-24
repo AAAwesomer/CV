@@ -52,20 +52,24 @@ img.profile {
   stroke: #3d2d0b;
 }
 
+#video-svg {
+  stroke-width: 0.03em;
+}
+
 #skill-svg {
   width: 2.2em;
-  height: 2.2em;
+  height: 2.4em;
 }
 
 #school-svg {
   width: 2.3em;
-  height: 2.3em;
+  height: 2.5em;
 }
 
 #mail-svg {
   width: 1.7em;
   height: 1.7em;
-  stroke-width: 4px;
+  stroke-width: 0.2em;
 }
 
 .header-text {
@@ -123,7 +127,7 @@ a {
 }
 
 .fade-text {
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .button {
