@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import './App.css';
 import Type from './components/typist'
@@ -12,13 +12,19 @@ import Credits from './components/credits'
 
 var createReactClass = require('create-react-class');
 
+const NoMatch = ({ location }) => (
+  <div>
+    <h3>No match for <code>{location.pathname}</code></h3>
+  </div>
+)
+
 var App = createReactClass({
 
   render() {
     return (
       <div className="App">
         <Router>
-          <div>
+          <Switch>
             <Route exact path="/" component={Type} />
             <Route path="/home" component={Header} />
             <Route path="/education" component={Education} />
@@ -26,7 +32,8 @@ var App = createReactClass({
             <Route path="/achievements" component={Achievements} />
             <Route path="/video" component={Video} />
             <Route path="/credits" component={Credits} />
-          </div>
+            <Route path="/*" component={NoMatch}/>
+          </Switch>
         </Router>
       </div> 
     );
