@@ -224,6 +224,18 @@ p {
   margin: 2.5vh 15vw;
 }
 
+.achievements {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.achievement-cards {
+  position: absolute;
+  width: 100vw;
+  min-height: 90vh;
+  top: 10vh;
+}
+
 .home-btn-container {
   position: absolute;
   top: 0;

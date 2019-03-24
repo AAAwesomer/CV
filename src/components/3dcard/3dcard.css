@@ -1,16 +1,4 @@
 
-.achievements {
-  width: 100vw;
-  min-height: 100vh;
-}
-
-.achievement-cards {
-  position: absolute;
-  width: 100vw;
-  min-height: 90vh;
-  top: 10vh;
-}
-
 .card {
   background-color: white;
   display: inline-block;
