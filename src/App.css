@@ -146,6 +146,10 @@ a {
   margin-top: 16px;
 }
 
+.type {
+  font-size: calc(6px + 2vmin)
+}
+
 .attr {
   font-size: calc(8px + 2vmin);
   text-align: left;
