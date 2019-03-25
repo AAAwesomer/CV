@@ -251,5 +251,6 @@ p {
 }
 
 #home-btn {
+  display: inline-block;
   margin-top: 3.2vh;
 }
